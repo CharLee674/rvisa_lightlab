@@ -1,7 +1,7 @@
 import numpy as np
 from lightlab.util.data import Waveform
 from .Tektronix_DPO4034_Oscope import Tektronix_DPO4034_Oscope
-import pyvisa
+import rvisa as pyvisa
 from lightlab import visalogger as logger
 
 

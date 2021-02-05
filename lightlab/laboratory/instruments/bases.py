@@ -11,7 +11,7 @@ from lightlab.equipment.visa_bases import VISAObject, DefaultDriver
 from lightlab.util.data import mangle
 
 from lightlab import logger
-import pyvisa
+import rvisa as pyvisa
 
 
 class Host(Node):

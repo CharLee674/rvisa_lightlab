@@ -4,7 +4,7 @@ from lightlab.laboratory.instruments import OpticalSpectrumAnalyzer
 
 import numpy as np
 from lightlab.util.data import Spectrum
-import pyvisa
+import rvisa as pyvisa
 import time
 from lightlab import visalogger as logger
 import socket

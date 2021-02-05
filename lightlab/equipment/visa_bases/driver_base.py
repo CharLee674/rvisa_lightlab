@@ -3,7 +3,7 @@ from contextlib import contextmanager
 import socket
 import time
 from lightlab import visalogger as logger
-from pyvisa.util import from_ascii_block
+from rvisa.util import from_ascii_block
 
 
 class InstrumentSessionBase(ABC):

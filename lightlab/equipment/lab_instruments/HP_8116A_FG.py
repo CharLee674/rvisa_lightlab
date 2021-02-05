@@ -4,7 +4,7 @@ from lightlab.laboratory.instruments import FunctionGenerator
 
 import numpy as np
 import time
-from pyvisa import VisaIOError
+from rvisa import VisaIOError
 from lightlab import visalogger as logger
 from . import BuggyHardware
 
