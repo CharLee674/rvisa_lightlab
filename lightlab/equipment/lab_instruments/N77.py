@@ -57,6 +57,6 @@ class N7744A(object):
     	self.instr.write(f"OUTP{slot}:CHAN{chan}:POW:UN {unit}")
     	#print("unit set to", self.instr.query(f"OUTP{slot}:CHAN{chan}:POW:UN?"))
 
-   	def setOutput(self,slot,chan,state):#0/1
-   		self.instr.write(f"OUTP{slot}:CHAN{chan}:STAT {state}")
-   		#print("Output set to", self.instr.query(f"OUTP{slot}:CHAN{chan}:STAT?"))
+    def setOutput(self,slot,chan,state):#0/1
+    	self.instr.write(f"OUTP{slot}:CHAN{chan}:STAT {state}")
+    	#print("Output set to", self.instr.query(f"OUTP{slot}:CHAN{chan}:STAT?"))

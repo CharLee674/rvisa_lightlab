@@ -5,7 +5,6 @@ from .driver_base import InstrumentSessionBase
 from .prologix_gpib import PrologixGPIBObject
 from .visa_object import VISAObject
 
-
 class InstrumentIOError(RuntimeError):
     pass
 

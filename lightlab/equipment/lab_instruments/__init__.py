@@ -1,4 +1,5 @@
 from ..visa_bases import VISAInstrumentDriver
+from ..visa_bases import RVISAInstrumentDriver
 
 # This imports all of the modules in this folder
 # As well as all their member classes that are VISAInstrumentDriver
@@ -22,4 +23,6 @@ for _, modname, _ in pkgutil.walk_packages(path=__path__,  # noqa
             except AttributeError:
                 continue
             if VISAInstrumentDriver in mro:
+                globals()[k] = v
+            if RVISAInstrumentDriver in mro:
                 globals()[k] = v
