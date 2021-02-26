@@ -94,6 +94,7 @@ class RVISAObject(VISAObject):
             if self.tempSess:
                 self.close()
 
+
     
     @property
     def timeout(self):
@@ -107,10 +108,6 @@ class RVISAObject(VISAObject):
             else:
                 pass # NOTE: RVisa does not have a built-in attribute for timeouts under our ResourceManager. Timeouts are handled on a query-basis.
         return self.__timeout
-
-    @property
-    def timeout(self):
-        raise NotImplementedError()
         
     @property
     def termination(self):
