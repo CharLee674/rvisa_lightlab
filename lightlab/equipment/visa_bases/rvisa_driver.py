@@ -1,4 +1,4 @@
-from lightlab import visalogger
+from ...__init__ import visalogger as logger #from the commented section to the actual code #from lightlab import visalogger
 from .visa_driver import DriverMeta
 import inspect
 

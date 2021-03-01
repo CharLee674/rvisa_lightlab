@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from contextlib import contextmanager
 import socket
 import time
-from lightlab import visalogger as logger
+from ...__init__  import visalogger as logger
 from rvisa.util import from_ascii_block
 
 

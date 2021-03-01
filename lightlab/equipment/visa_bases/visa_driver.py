@@ -1,4 +1,4 @@
-from lightlab import visalogger
+from ...__init__ import visalogger as logger
 import inspect
 
 from .driver_base import InstrumentSessionBase
