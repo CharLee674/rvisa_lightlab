@@ -1,5 +1,5 @@
 from . import VISAInstrumentDriver
-from lightlab.equipment.abstract_drivers import PowerMeterAbstract
+from ..abstract_drivers import PowerMeterAbstract #from lightlab.equipment.abstract_drivers import PowerMeterAbstract
 from lightlab.laboratory.instruments import PowerMeter
 
 

@@ -2,7 +2,7 @@
 import socket
 import time
 import re
-from lightlab import visalogger as logger
+from ...__init__ import visalogger as logger
 from .driver_base import InstrumentSessionBase, TCPSocketConnection
 
 

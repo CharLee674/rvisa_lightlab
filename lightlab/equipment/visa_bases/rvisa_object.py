@@ -1,6 +1,6 @@
 import rvisa as visa
 import time
-from lightlab import visalogger as logger
+from ...__init__ import visalogger as logger
 from .driver_base import InstrumentSessionBase
 from .visa_object import VISAObject
 

@@ -1,6 +1,6 @@
 import rvisa as pyvisa
 import time
-from lightlab import visalogger as logger
+from ...__init__ import visalogger as logger
 from .driver_base import InstrumentSessionBase
 
 OPEN_RETRIES = 5
