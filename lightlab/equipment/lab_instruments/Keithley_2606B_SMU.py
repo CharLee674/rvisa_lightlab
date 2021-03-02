@@ -27,7 +27,7 @@ print(smua.measure.i(smua.nvbuffer1))
 smua.source.output = smua.OUTPUT_OFF
 
 """
-#from . import VISAInstrumentDriver
+from . import VISAInstrumentDriver
 from . import RVISAInstrumentDriver
 from lightlab.equipment.visa_bases.driver_base import TCPSocketConnection
 from lightlab.laboratory.instruments import Keithley
@@ -439,7 +439,7 @@ class Remote_Keithley_2606B_SMU(RVISAInstrumentDriver):
         self.tsp_node = tsp_node
         self.host=url
         visa_kwargs["tempSess"] = visa_kwargs.pop("tempSess", True)
-        VISAInstrumentDriver.__init__(self, name=name, address=address, **visa_kwargs)
+        RVISAInstrumentDriver.__init__(self, name=name, address=address, **visa_kwargs)
         self.reinstantiate_session(address, visa_kwargs["tempSess"])
 
     # BEGIN TCPSOCKET METHODS

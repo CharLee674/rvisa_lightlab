@@ -1,4 +1,4 @@
-from lightlab import visalogger as logger
+from ...__init__ import visalogger as logger
 from pyvisa import VisaIOError
 from contextlib import contextmanager
 import dpath.util

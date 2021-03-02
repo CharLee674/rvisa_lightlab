@@ -8,13 +8,13 @@ from .rvisa_object import RVISAObject
 class RemoteSession(InstrumentSession):
     _session_object = None
     
-    def __init__(self, address=None, tempSess=False, url=None):
-        self.reinstantiate_session(address, tempSess, url)
+    def __init__(self, address=None, tempSess=False, url=None, **kwargs):
+        self.reinstantiate_session(address=address, tempSess=tempSess, url=url)
         self.tempSess = tempSess
         self.address = address
         self.url = url
     
-    def reinstantiate_session(self, address, tempSess, url):
+    def reinstantiate_session(self, address=None, tempSess=None, url=None, **kwargs):
         self._session_object = RVISAObject(address=address, tempSess=tempSess, url=url)
     
     
