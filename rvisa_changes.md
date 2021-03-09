@@ -123,7 +123,16 @@ except:
     # Output: -224,"Illegal parameter value"
 ```
 
-## Next step: test with Keithley 2606B
+## Keithley 2606B Test
+To adjust the Keithley to its RVisa equivalent, I had to do the following:
+- Fix import statements
+- Override methods involving TSP socket connections, replacing them with pure VISA versions
+
+To do so, I took the original driver, copied it over, and created a new class:
+```Python
+class Remote_Keithley_2606B_SMU(RVISAInstrumentDriver):
+    # Rest of the class follows, with the abovesockets listed changes for TSP sockets
+```
 
 ### Debugging
 - Some imports are not being loaded properly (namely, the `RVISAInstrumentDriver` class is not getting imported)
