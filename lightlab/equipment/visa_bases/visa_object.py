@@ -1,4 +1,4 @@
-import rvisa as pyvisa
+import pyvisa as pyvisa
 import time
 from ...__init__ import visalogger as logger
 from .driver_base import InstrumentSessionBase
