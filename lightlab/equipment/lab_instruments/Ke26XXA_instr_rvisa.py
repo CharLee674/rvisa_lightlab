@@ -86,3 +86,20 @@ class Ke26XX(object):
         else:
             for i in range(self.instr.query("*STB?")):
                 return(self.instr.query("SYST:ERR?"))
+            
+                          
+    def measVoltage(self):
+        retStr = self.query_print("{smuX}.measure.v()".format(smuX=self.smu_full_string))
+        v = float(retStr)
+        if self.compliance:
+            logger.warning('Keithley compliance voltage of %s reached', self.protectionVoltage)
+            logger.warning('You are sourcing %smW into the load.', v * self._latestCurrentVal * 1e-3)
+        return v
+
+    def measCurrent(self):
+        retStr = self.query_print("{smuX}.measure.i()".format(smuX=self.smu_full_string))
+        i = float(retStr)  # second number is current always
+        if self.compliance:
+            logger.warning('Keithley compliance current of %s reached', self.protectionCurrent)
+            logger.warning('You are sourcing %smW into the load.', i * self._latestVoltageVal * 1e-3)
+        return i
